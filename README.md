@@ -22,6 +22,7 @@ Run: `python -m pinterest_scraper.download_images` and provide arguments:
 * `--firefox_binary`: path to firefox executable
 * `--geckodriver`: path to geckodriver
 * `--headless`: if provided, then headless browser mode will be used
+* `--image_extensions`: list of image extensions, if image's url doesn't match any of them, then the image will be saved without extension. By default: `".jpg" ".gif" ".png" ".jpeg"`
 
 ! Notice: while scraping some of the links might be corrupted, that's why the result number of downloaded images may be less than number of pins on `url` page
 
@@ -33,5 +34,6 @@ python -m pinterest_scraper.download_images \
     --max_scrolls 10 \
     --geckodriver ~/Downloads/geckodriver \
     --firefox_binary /usr/bin/firefox \
-    --headless
+    --headless \
+    --image_extensions .jpg .jpeg .gif .png .tiff
 ```
