@@ -5,7 +5,7 @@ Image scraper for Pinterest
 
 ### Installation
 
-1. Use Python of version 3.8 or greater
+1. Use Python of version 3.6 or greater
 2. Clone repository: `git clone https://github.com/evjeny/pinterest_scraper`
 3. Install package: `python setup.py install`
 4. Download and install Firefox
