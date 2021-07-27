@@ -17,6 +17,8 @@ def get_pin_urls(url: str, max_scrolls: int, max_no_scrolls: int, headless: bool
             scroll_callback=lambda: pbar.update()
         )
     
+    pp.close()
+    
     return pin_urls
 
 
@@ -25,6 +27,8 @@ def get_image_urls(pin_urls: typing.List[str], headless: bool, **kwargs) -> typi
     with tqdm(total=len(pin_urls), desc="Get image urls") as pbar:
         image_urls = image_getter.get_image_urls(pin_urls, update_callback=lambda: pbar.update())
     
+    image_getter.close()
+
     return [url for url in image_urls if url is not None]
 
 

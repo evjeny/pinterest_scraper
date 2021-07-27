@@ -50,6 +50,9 @@ class PinterestScraper:
 
         pins = self.browser.find_elements_by_css_selector('a[href^="/pin/"]')
         return [pin.get_attribute("href") for pin in pins]
+    
+    def close(self):
+        self.browser.close()
 
 
 class ImageGetter:
@@ -86,6 +89,9 @@ class ImageGetter:
             if update_callback:
                 update_callback()
         return result
+    
+    def close(self):
+        self.browser.close()
 
 
 class ImageGetterWorker(context.Process):
