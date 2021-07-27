@@ -29,4 +29,3 @@ dependencies:
     - selenium==3.141.0
     - tqdm==4.61.2
     - urllib3==1.26.6
-prefix: /home/evjeny/anaconda3/envs/pinterest_scrapper
